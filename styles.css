@@ -1,0 +1,186 @@
+/*|| GENERAL */
+* {
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+body {
+    margin: 0;
+}
+/*|| HEADER*/
+#top {
+    background-color: aliceblue;
+    height: 5rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+#top h1 {
+    margin: 0;
+    padding-top: 1rem;
+}
+/* Hide mobile hamburger menu */
+.fas.fa-bars{
+    display: none;
+}
+/*|| NAVIGATION BAR*/
+#navbar {
+    height: 100%;
+    width: 20rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: lightgray;
+    overflow-x: hidden;
+    margin-top: 5rem;
+}
+#navbar > header {
+    font-size: 1.8rem;
+    padding: 1rem 0 0.3rem 1rem;
+}
+#navbar > ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+/* Nav links */
+.nav-link {
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+.nav-link:link {
+    color: black;
+}
+.nav-link:visited {
+    color: black;
+}
+.nav-link:hover {
+    background-color: rgb(172, 172, 172);
+    color: white;
+}
+.nav-link:active {
+    border: 1px solid black;
+}
+/*|| MAIN*/
+#main-doc {
+    margin-left: 20rem;
+    margin-top: 5rem;
+    padding: 1rem;
+}
+/* Adjust for fixed header*/
+.main-section {
+    scroll-margin-top: 5rem;
+}
+.main-section header {
+    font-size: 2rem;
+    font-weight: 600;
+}
+/*Example of proper code*/
+.example-right {
+    background-color: rgba(158, 158, 167, 0.6);
+    padding: 1rem;
+    display: block;
+    border-left: 5px solid blue;
+}
+/*Example of wrong code*/
+.example-wrong {
+    background-color: rgba(158, 158, 167, 0.6);
+    padding: 1rem;
+    display: block;
+    border-left: 5px solid red;
+}
+/*Inline code*/
+.inline {
+    font-weight: 600;
+}
+/*Inline code with background*/
+.inline-bckg {
+    background-color: rgba(183, 183, 202, 0.6);
+    font-weight: 600;
+}
+/*Special note*/
+.note {
+    background-color: rgba(220, 244, 255, 0.6);
+    padding: 1rem;
+}
+.note p {
+    margin: 0;
+}
+/*|| FOOTER*/
+footer {
+    margin-left: 20rem;
+    padding: 1rem;
+    background-color: aliceblue;
+}
+/*|| LINKS GENERAL*/
+a:link {
+    color: blue;
+}
+a:hover {
+    color: brown;
+}
+/*|| RESPONSIVE*/
+@media only screen and (max-width: 768px) {
+    #top {
+        height: 3rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #top h1 {
+        padding-top: 0rem;
+        font-size: 1.5rem;
+    }
+    #top a {
+        text-decoration: none;
+        padding: 0.8rem 1rem;
+        font-size: 1.5rem;
+        color: black;
+        background: #aacae6;
+        display: block;
+
+    }
+    #top a:hover {
+        color: #aacae6;
+        background: rgb(41, 41, 41);
+    }
+    .fas.fa-bars{
+        display: block;
+    }
+    #navbar {
+        width: 100%;
+        height: 15.9rem;
+        margin-top: 3rem;
+        border-bottom: 2px solid black;
+        display: none;
+    }
+    #navbar > header {
+        padding: 0.3rem 0 0.3rem 0.3rem;
+        font-size: 1.6rem;
+    }
+    .nav-link {
+        padding: 0.6rem;
+    }
+    #main-doc {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+    .main-section {
+        scroll-margin-top: 19rem;
+    }
+    footer {
+        margin-left: 0rem;
+        padding: 1rem;
+    }
+    footer p {
+        margin: 0;
+    }
+}

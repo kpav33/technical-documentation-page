@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Technical documentation page</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://use.fontawesome.com/6ae4af7f13.js"></script>
+        <script src="https://kit.fontawesome.com/5584ca888d.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header id="top">
+            <h1>Getting started with HTML</h1>
+            <a href="javascript:void(0);" class="icon" onclick="mobileMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
+        </header>
+        <div id="container">
+            <nav id="navbar">
+                <header>HTML documentation</header>
+                <ul>
+                    <li><a class="nav-link" href="#What_is_HTML?">What is HTML?</a></li>
+                    <li><a class="nav-link" href="#Anatomy_of_an_HTML_element">Anatomy of an HTML element</a></li>
+                    <li><a class="nav-link" href="#Attributes">Attributes</a></li>
+                    <li><a class="nav-link" href="#Anatomy_of_an_HTML_document">Anatomy of an HTML document</a></li>
+                    <li><a class="nav-link" href="#HTML_comments">HTML comments</a></li>
+                </ul>
+            </nav>
+            <main id="main-doc">
+                <section class="main-section" id="What_is_HTML?">
+                    <header>What is HTML?</header>
+                    <p><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML">HTML</a> (Hypertext Markup Language) is not a programming language. It is a <em>markup language</em> that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of <a href="https://developer.mozilla.org/en-US/docs/Glossary/Element">elements</a>, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The enclosing <a href="https://developer.mozilla.org/en-US/docs/Glossary/Tag">tags</a> can make content into a hyperlink to connect to another page, italicize words, and so on.  For example, consider the following line of text:</p>
+                    <code class="example-right">My cat is very grumpy</code>
+                    <p>If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph  (<code class="inline-bckg">&lt;p&gt;</code>) element:</p>
+                    <div class="note">
+                        <p><strong>Note:</strong> Tags in HTML are case-insensitive. This means they can be written in uppercase or lowercase. For example, a <code class="inline-bckg">&lt;title&gt;</code> tag could be written as <code class="inline-bckg">&lt;title&gt;</code>, <code class="inline-bckg">&lt;TITLE&gt;</code>, <code class="inline-bckg">&lt;Title&gt;</code>, <code class="inline-bckg">&lt;TiTlE&gt;</code>, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency, readability, and other reasons.
+                        </p>
+                    </div>
+                </section>
+                <section class="main-section" id="Anatomy_of_an_HTML_element">
+                    <header>Anatomy of an HTML element</header>
+                    <p>The anatomy of our element is:</p>
+                    <ul>
+                        <li><strong>The opening tag</strong>: This consists of the name of the element (in this example, p for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.</li>
+                        <li><strong>The content</strong>: This is the content of the element. In this example, it is the paragraph text.</li>
+                        <li><strong>The closing tag</strong>: This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.</li>
+                    </ul>
+                    <p>The element is the opening tag, followed by content, followed by the closing tag.</p>
+                    <h2>Nesting elements</h2>
+                    <p>Elements can be placed within other elements. This is called nesting. If we wanted to state that our cat is very grumpy, we could wrap the word very in a <code class="inline-bckg">&lt;strong&gt;</code> element, which means that the word is to have strong(er) text formatting:</p>
+                    <code class="example-right">&lt;p&gt;My cat is &lt;strong&gt;very&lt;/strong&gt; grumpy.&lt;/p&gt;</code>
+                    <p>There is a right and wrong way to do nesting. In the example above, we opened the p element first, then opened the strong element. For proper nesting, we should close the strong element first, before closing the p.</p>
+                    <p>The following is an example of the wrong way to do nesting:</p>
+                    <code class="example-wrong">&lt;p&gt;My cat is &lt;strong&gt;very grumpy.&lt;/p&gt;&lt;/strong&gt;</code>
+                    <p>The <strong>tags have to open and close in a way that they are inside or outside one another</strong>. With the kind of overlap in the example above, the browser has to guess at your intent. This kind of guessing can result in unexpected results.</p>
+                </section>
+                <section class="main-section" id="Attributes">
+                    <header>Attributes</header>
+                    <p>Attributes contain extra information about the element that won't appear in the content. In this example, the <strong>class</strong> attribute is an identifying name used to target the element with style information.</p>
+                    <p>An attribute should have:</p>
+                    <ul>
+                        <li>A space between it and the element name. (For an element with more than one attribute, the attributes should be separated by spaces too.)</li>
+                        <li>The attribute name, followed by an equal sign.</li>
+                        <li>An attribute value, wrapped with opening and closing quote marks.</li>
+                    </ul>
+                </section>
+                <section class="main-section" id="Anatomy_of_an_HTML_document">
+                    <header>Anatomy of an HTML document</header>
+                    <p>Individual HTML elements aren't very useful on their own. Next, let's examine how individual elements combine to form an entire HTML page:</p>
+                    <p>Here we have:</p>
+                    <ol>
+                        <li><code class="inline">&lt;!DOCTYPE html&gt;</code>: The doctype. When HTML was young (1991-1992), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML. Doctypes used to look something like this:<code class="inline">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</code></li>
+                        <li><code class="inline">&lt;html&gt;&lt;/html&gt;</code>: The &lt;html&gt; element. This element wraps all the content on the page. It is sometimes known as the root element.</li>
+                    </ol>
+                </section>
+                <section class="main-section" id="HTML_comments">
+                    <header>HTML comments</header>
+                    <p>HTML has a mechanism to write comments in the code. Browsers ignore comments, effectively making comments invisible to the user. The purpose of comments is to allow you to include notes in the code to explain your logic or coding. This is very useful if you return to a code base after being away for long enough that you don't completely remember it. Likewise, comments are invaluable as different people are making changes and updates.</p>
+                    <p>To write an HTML comment, wrap it in the special markers <code class="inline-bckg">&lt;!--</code> and <code class="inline-bckg">--&gt;</code>. For example:</p>
+                    <code class="example-right">&lt;p&gt;I'm not inside a comment&lt;/p&gt;</code>
+                    <code class="example-right">&lt;!-- &lt;p&gt;I am!&lt;/p&gt; --&gt;</code>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <p>All of the documentation for this page was taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started" target="_blank">MDN.</a></p>
+        </footer>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+        <script src="scripts.js"></script>
+    </body>
+</html>
